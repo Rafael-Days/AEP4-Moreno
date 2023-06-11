@@ -1,1 +1,6 @@
-document.write("bill");
+eae meu?
+tudo bom?
+como voce ta?
+show de boleta?
+nota 10 heim meu?
+passar bem!

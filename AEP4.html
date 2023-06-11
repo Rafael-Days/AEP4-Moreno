@@ -1,11 +1,39 @@
-<!DOCTYPE html>
-<html lang = "pt-br">
-    <head>
-    </head>
+<body onload="carregarArquivo()">
+    <div id="conteudo"></div>
+    <script>
+        var linhas = [];
+        var txtM = [];
+        var x, tamanho;
 
-    <body>
-        <p id="texto"></p>
-        <script src="AEP4.js"></script>
-    </body>
+        function carregarArquivo() {
+            fetch('seu_arquivo.txt')
+                .then(response => response.text())
+                .then(texto => {
+                    document.getElementById('conteudo').innerHTML = texto;
+                    linhas = texto.split('\n'); // Divide o texto em linhas e atribui à array "linhas"
+                    console.log("aa");
+                    maiusc();
+                    mostrar();
+                })
+                .catch(error => {
+                    console.log('Ocorreu um erro ao carregar o arquivo:', error);
+                });
+        }
 
-</html>
+        function maiusc() {
+            tamanho = linhas.length;
+
+            for (x = 0; x < tamanho; x++) {
+                txtM[x] = linhas[x].toUpperCase();
+            }
+            txtM.sort();
+        }
+
+
+        function mostrar() {
+            for (x = 0; x < tamanho; x++) {
+                document.write(txtM[x] + '<br>');
+            }
+        }
+    </script>
+</body>
