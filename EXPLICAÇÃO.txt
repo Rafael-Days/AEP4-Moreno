@@ -1,0 +1,3 @@
+bom dia professor, se estiver lendo isso, quero deixar claro que por algum motivo esse código só funciona no Live Server.
+Tentei arrumar isso mas não consegui, porém o código funciona corretemente.
+Passar bem.
